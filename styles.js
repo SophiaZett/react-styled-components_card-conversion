@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Rubik_Moonrocks } from "next/font/google";
+
+const RubikMoonrocks = Rubik_Moonrocks({ subsets: ["latin"], weight: ["400"] });
 
 export default createGlobalStyle`
   *,
@@ -9,7 +12,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${RubikMoonrocks.style.fontFamily};
     line-height: 1.5;
   }
 
